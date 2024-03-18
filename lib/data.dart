@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const baseURL = 'http://192.168.1.3/api';
+const baseURL = 'http://192.168.1.2/api';
 const loginURL = '$baseURL/login';
 const registerURL = '$baseURL/register';
 const logoutURL = '$baseURL/logout';

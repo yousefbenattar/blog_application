@@ -1,5 +1,6 @@
 import 'package:blog_application/data.dart';
 import 'package:blog_application/models/api_response.dart';
+import 'package:blog_application/screens/register.dart';
 import 'package:blog_application/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
@@ -25,7 +26,7 @@ class _LoadingState extends State<Loading> {
       Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>const Home()), (route) => false);
       }
       else if (response.error == unauthorized){
-      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>const Login()), (route) => false);
+      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>const Register()), (route) => false);
       }
       else{
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${response.error}")));
